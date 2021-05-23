@@ -2,35 +2,32 @@
 //  CardView.swift
 //  CardView
 //
-//  Created by denpazakura on 10/01/2021.
+//  Created by denpazakura on 10/05/2021.
 //
 
 import SwiftUI
 
 struct CardView: View {
-    private var titleText: String
-    private var subtitleText: String
-    
-    init(titleText: String,
-         subtitleText: String) {
-        self.titleText = titleText
-        self.subtitleText = subtitleText
+    private let image: UnsplashImage
+    private let style: CardStyle
+        
+    init(image: UnsplashImage,
+         style: CardStyle) {
+        self.image = image
+        self.style = style
     }
     
     var body: some View {
         VStack {
             ZStack {
-                Image("alina_rubo")
+                Image(image.name)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                 
                 HStack {
-                    
                     VStack(alignment: .leading) {
-                        Text(titleText)
-                            .font(.largeTitle)
-                            .foregroundColor(.primary)
-                        Text(subtitleText)
+                        Text(verbatim: image.creator)
+                        Text("subtitleText")
                             .font(.subheadline)
                     }
                     .layoutPriority(100)
@@ -40,18 +37,25 @@ struct CardView: View {
                 .padding()
             }
         }
-        .cardStyle()
+        .cardStyle(style: style)
     }
 }
 
 private extension View {
-    func cardStyle(color: Color = .black) -> some View {
-        self.modifier(CardModifierMinimal(color: Color.black))
+    func cardStyle(style: CardStyle) -> some View {
+        switch style {
+        case .minimalistic:
+            return AnyView(modifier(CardModifierMinimal()))
+        case .roundedCorners:
+           return AnyView(modifier(CardModifierRounded()))
+        }
     }
 }
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        CardView(titleText: "Card title", subtitleText: "subtitle")
+        CardView(image: UnsplashImage.init( name: "laura_adai",
+                                            creator: "Laura Adai",
+                                            url: " https://unsplash.com/photos/jFvhaeH1dJk", contentStyle: "minimal"), style: .minimalistic)
     }
 }

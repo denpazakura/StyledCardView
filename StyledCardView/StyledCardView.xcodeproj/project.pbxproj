@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A11FEE0C25EC20C80057AFC8 /* unsplash.json in Resources */ = {isa = PBXBuildFile; fileRef = A1B069AD25D0B6C9007C71C8 /* unsplash.json */; };
+		A1288251265AF12B00413868 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1288250265AF12B00413868 /* MainView.swift */; };
 		A1B0698D25D0B67E007C71C8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1B0698C25D0B67E007C71C8 /* Preview Assets.xcassets */; };
 		A1B0699025D0B67E007C71C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1B0698E25D0B67E007C71C8 /* LaunchScreen.storyboard */; };
 		A1B0699A25D0B6A8007C71C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1B0699925D0B6A8007C71C8 /* Assets.xcassets */; };
@@ -19,11 +21,11 @@
 		A1B069B225D0B6C9007C71C8 /* MinimalStyleContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B069AA25D0B6C9007C71C8 /* MinimalStyleContentView.swift */; };
 		A1B069B325D0B6C9007C71C8 /* CardStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B069AB25D0B6C9007C71C8 /* CardStyle.swift */; };
 		A1B069B425D0B6C9007C71C8 /* CardModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B069AC25D0B6C9007C71C8 /* CardModifier.swift */; };
-		A1B069B525D0B6C9007C71C8 /* unsplash.json in Resources */ = {isa = PBXBuildFile; fileRef = A1B069AD25D0B6C9007C71C8 /* unsplash.json */; };
 		A1B069B825D0B732007C71C8 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B069B725D0B732007C71C8 /* DataProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A1288250265AF12B00413868 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		A1B0698025D0B67C007C71C8 /* StyledCardView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StyledCardView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1B0698C25D0B67E007C71C8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A1B0698F25D0B67E007C71C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,7 +40,7 @@
 		A1B069AA25D0B6C9007C71C8 /* MinimalStyleContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinimalStyleContentView.swift; sourceTree = "<group>"; };
 		A1B069AB25D0B6C9007C71C8 /* CardStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardStyle.swift; sourceTree = "<group>"; };
 		A1B069AC25D0B6C9007C71C8 /* CardModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardModifier.swift; sourceTree = "<group>"; };
-		A1B069AD25D0B6C9007C71C8 /* unsplash.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = unsplash.json; sourceTree = "<group>"; };
+		A1B069AD25D0B6C9007C71C8 /* unsplash.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = unsplash.json; path = /Users/dkomolova/Desktop/StyledCardView/StyledCardView/StyledCardView/unsplash.json; sourceTree = "<absolute>"; };
 		A1B069B725D0B732007C71C8 /* DataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -56,6 +58,7 @@
 		A1B0697725D0B67C007C71C8 = {
 			isa = PBXGroup;
 			children = (
+				A1B069AD25D0B6C9007C71C8 /* unsplash.json */,
 				A1B0698225D0B67C007C71C8 /* StyledCardView */,
 				A1B0698125D0B67C007C71C8 /* Products */,
 			);
@@ -77,7 +80,6 @@
 				A1B069A625D0B6C8007C71C8 /* ImageService */,
 				A1B069A425D0B6C8007C71C8 /* Model */,
 				A1B069A825D0B6C9007C71C8 /* Scene */,
-				A1B069AD25D0B6C9007C71C8 /* unsplash.json */,
 				A1B069A225D0B6C8007C71C8 /* View */,
 				A1B0699C25D0B6B7007C71C8 /* Application */,
 				A1B0699925D0B6A8007C71C8 /* Assets.xcassets */,
@@ -135,6 +137,7 @@
 			children = (
 				A1B069A925D0B6C9007C71C8 /* RoundedStyleContentView.swift */,
 				A1B069AA25D0B6C9007C71C8 /* MinimalStyleContentView.swift */,
+				A1288250265AF12B00413868 /* MainView.swift */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -196,10 +199,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A11FEE0C25EC20C80057AFC8 /* unsplash.json in Resources */,
 				A1B0699025D0B67E007C71C8 /* LaunchScreen.storyboard in Resources */,
 				A1B0699A25D0B6A8007C71C8 /* Assets.xcassets in Resources */,
 				A1B0698D25D0B67E007C71C8 /* Preview Assets.xcassets in Resources */,
-				A1B069B525D0B6C9007C71C8 /* unsplash.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,6 +220,7 @@
 				A1B069A025D0B6B7007C71C8 /* SceneDelegate.swift in Sources */,
 				A1B069B025D0B6C9007C71C8 /* Bundle.swift in Sources */,
 				A1B069B325D0B6C9007C71C8 /* CardStyle.swift in Sources */,
+				A1288251265AF12B00413868 /* MainView.swift in Sources */,
 				A1B069B125D0B6C9007C71C8 /* RoundedStyleContentView.swift in Sources */,
 				A1B069AF25D0B6C9007C71C8 /* UnsplashImage.swift in Sources */,
 				A1B069B425D0B6C9007C71C8 /* CardModifier.swift in Sources */,

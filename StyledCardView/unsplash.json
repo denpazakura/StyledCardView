@@ -1,0 +1,38 @@
+[
+    {
+        "name": "alina_rubo",
+        "creator": "Alina Rubo",
+        "url": "https://unsplash.com/photos/fjZ8wa1PhmI",
+        "contentStyle": "minimal"
+    },
+    {
+        "name": "ihor_rapita",
+        "creator": "Ihor Rapita",
+        "url": "https://unsplash.com/photos/OHPFp9YhqQ0",
+        "contentStyle": "minimal"
+    },
+    {
+        "name": "ameen_fahmy",
+        "creator": "Ameen Fahmy",
+        "url": "https://unsplash.com/photos/SDG9idxk9_k",
+        "contentStyle": "rounded"
+    },
+    {
+        "name": "laura_adai",
+        "creator": "Laura Adai",
+        "url": " https://unsplash.com/photos/jFvhaeH1dJk",
+        "contentStyle": "minimal"
+    },
+    {
+        "name": "heather_barnes",
+        "creator": "Heather Barnes",
+        "url": "https://unsplash.com/photos/SDG9idxk9_k",
+        "contentStyle": "rounded"
+    },
+    {
+        "name": "lina_kivaka",
+        "creator": "Lina Kivaka",
+        "url": "https://unsplash.com/photos/SDG9idxk9_k",
+        "contentStyle": "rounded"
+    }
+]

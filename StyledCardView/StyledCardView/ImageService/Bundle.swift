@@ -2,7 +2,7 @@
 //  Bundle.swift
 //  CardView
 //
-//  Created by denpazakura on 24/01/2021.
+//  Created by denpazakura on 24/05/2021.
 //
 
 import Foundation
