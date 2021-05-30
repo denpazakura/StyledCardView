@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A10ECB97265D75AE00B173B8 /* ExpandModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10ECB96265D75AE00B173B8 /* ExpandModifier.swift */; };
 		A11FEE0C25EC20C80057AFC8 /* unsplash.json in Resources */ = {isa = PBXBuildFile; fileRef = A1B069AD25D0B6C9007C71C8 /* unsplash.json */; };
 		A1288251265AF12B00413868 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1288250265AF12B00413868 /* MainView.swift */; };
+		A171DD212663C30200A42114 /* UnsplashImageCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A171DD202663C30200A42114 /* UnsplashImageCard.swift */; };
 		A1B0698D25D0B67E007C71C8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1B0698C25D0B67E007C71C8 /* Preview Assets.xcassets */; };
 		A1B0699025D0B67E007C71C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1B0698E25D0B67E007C71C8 /* LaunchScreen.storyboard */; };
 		A1B0699A25D0B6A8007C71C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1B0699925D0B6A8007C71C8 /* Assets.xcassets */; };
@@ -25,7 +27,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A10ECB96265D75AE00B173B8 /* ExpandModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandModifier.swift; sourceTree = "<group>"; };
 		A1288250265AF12B00413868 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		A171DD202663C30200A42114 /* UnsplashImageCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashImageCard.swift; sourceTree = "<group>"; };
 		A1B0698025D0B67C007C71C8 /* StyledCardView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StyledCardView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1B0698C25D0B67E007C71C8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A1B0698F25D0B67E007C71C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -75,6 +79,7 @@
 		A1B0698225D0B67C007C71C8 /* StyledCardView */ = {
 			isa = PBXGroup;
 			children = (
+				A10ECB96265D75AE00B173B8 /* ExpandModifier.swift */,
 				A1B069AC25D0B6C9007C71C8 /* CardModifier.swift */,
 				A1B069AB25D0B6C9007C71C8 /* CardStyle.swift */,
 				A1B069A625D0B6C8007C71C8 /* ImageService */,
@@ -119,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				A1B069A525D0B6C8007C71C8 /* UnsplashImage.swift */,
+				A171DD202663C30200A42114 /* UnsplashImageCard.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -215,9 +221,11 @@
 			files = (
 				A1B0699F25D0B6B7007C71C8 /* AppDelegate.swift in Sources */,
 				A1B069B225D0B6C9007C71C8 /* MinimalStyleContentView.swift in Sources */,
+				A10ECB97265D75AE00B173B8 /* ExpandModifier.swift in Sources */,
 				A1B069B825D0B732007C71C8 /* DataProvider.swift in Sources */,
 				A1B069AE25D0B6C9007C71C8 /* CardView.swift in Sources */,
 				A1B069A025D0B6B7007C71C8 /* SceneDelegate.swift in Sources */,
+				A171DD212663C30200A42114 /* UnsplashImageCard.swift in Sources */,
 				A1B069B025D0B6C9007C71C8 /* Bundle.swift in Sources */,
 				A1B069B325D0B6C9007C71C8 /* CardStyle.swift in Sources */,
 				A1288251265AF12B00413868 /* MainView.swift in Sources */,

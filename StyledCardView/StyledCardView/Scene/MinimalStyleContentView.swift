@@ -8,24 +8,44 @@
 import SwiftUI
 
 struct MinimalStyleContentView: View {
-    private let dataProvider: DataProvider = DataProvider(bundle: .main)
     
-    @State private var images = [UnsplashImage]()
-
+    @State private var cards = [UnsplashImageCard]()
+    
+    @State var isExpanded: Bool = false
+    
+    init(imageProvider: DataProvider) {
+        let imageData = imageProvider.minimalStyleImages()
+        let cards =  imageData.map { UnsplashImageCard.init(imageData: $0) }
+        
+        self._cards = /*State<[UnsplashImageCard>*/.init(initialValue: cards)
+    }
+    
     var body: some View {
-        ScrollView {
-            LazyVStack(spacing: 5) {
-                ForEach(dataProvider.minimalStyleImages(), id: \.self) { image in
-                    CardView(image: image, style: .minimalistic)
+        GeometryReader { geometry in
+            ScrollView {
+                LazyVStack(spacing: 5) {
+                    ForEach(0..<cards.count) { i in
+                        CardView(imageCard: cards[i], style: .minimalistic)
+                            .onTapGesture {
+                                withAnimation(.interactiveSpring(response: 0.5, dampingFraction: 0.8, blendDuration: 0)) {
+                                    isExpanded.toggle()
+                                    cards[i].isExpanded.toggle()
+                                }
+                            }
+                            .frame(height: cards[i].isExpanded ? UIScreen.main.bounds.height : 250)
+                    }
+                    
                 }
+                
             }
+            .padding([.top, .horizontal])
+            
         }
-        .padding([.top, .horizontal])
     }
 }
 
 struct MinimalStyleContentView_Previews: PreviewProvider {
     static var previews: some View {
-        MinimalStyleContentView()
+        MinimalStyleContentView(imageProvider: DataProvider.init(bundle: .main))
     }
 }

@@ -52,8 +52,7 @@ struct CardModifierMinimal: ViewModifier {
             .border(styler.borderColor(), width: 0)
             .font(styler.headlineFont())
             .foregroundColor(styler.basicOverlayColor())
-    }
-}
+    }}
 
 struct CardModifierRounded: ViewModifier {
     private let styler = CardStyler(style: .roundedCorners)
@@ -65,3 +64,4 @@ struct CardModifierRounded: ViewModifier {
             .foregroundColor(styler.basicOverlayColor())
     }
 }
+

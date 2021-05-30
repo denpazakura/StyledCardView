@@ -7,37 +7,46 @@
 
 import SwiftUI
 
-struct CardView: View {
-    private let image: UnsplashImage
+struct CardView: View {    
+    private var imageCard: UnsplashImageCard
     private let style: CardStyle
-        
-    init(image: UnsplashImage,
+    
+    @State var contentMode = ContentMode.fit
+    @State var isExpanded = false
+    @State private var isFullScreen = false
+
+    init(imageCard: UnsplashImageCard,
          style: CardStyle) {
-        self.image = image
+        self.imageCard = imageCard
         self.style = style
     }
     
     var body: some View {
-        VStack {
-            ZStack {
-                Image(image.name)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                
-                HStack {
-                    VStack(alignment: .leading) {
-                        Text(verbatim: image.creator)
-                        Text("subtitleText")
-                            .font(.subheadline)
+            VStack {
+                ZStack {
+                    Image(imageCard.image.name)
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(height: imageCard.isExpanded ? UIScreen.main.bounds.height : 300, alignment: .leading)
+                        .clipped()
+                    HStack {
+                        
+                        if(self.imageCard.isExpanded) {
+                            Spacer()
+                        }
+                        
+                        VStack(alignment: .leading) {
+                            Text(verbatim: imageCard.image.creator)
+                            Text("subtitleText")
+                                .font(.subheadline)
+                        }
+                        .layoutPriority(100)
+                        Spacer()
                     }
-                    .layoutPriority(100)
-                    
-                    Spacer()
+                    .padding()
                 }
-                .padding()
             }
-        }
-        .cardStyle(style: style)
+            .cardStyle(style: style)
     }
 }
 
@@ -54,8 +63,8 @@ private extension View {
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        CardView(image: UnsplashImage.init( name: "laura_adai",
-                                            creator: "Laura Adai",
-                                            url: " https://unsplash.com/photos/jFvhaeH1dJk", contentStyle: "minimal"), style: .minimalistic)
+        CardView(imageCard: UnsplashImageCard(imageData: UnsplashImage(name: "laura_adai",
+                                                                            creator: "Laura Adai",
+                                                                            url: " https://unsplash.com/photos/jFvhaeH1dJk", contentStyle: "minimal")), style: .minimalistic)
     }
 }

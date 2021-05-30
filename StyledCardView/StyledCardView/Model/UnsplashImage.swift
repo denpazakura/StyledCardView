@@ -7,7 +7,9 @@
 
 import Foundation
 
-struct UnsplashImage: Codable, Hashable {
+struct UnsplashImage: Codable {
+    var isExpanded: Bool? = false
+    
     var name: String
     var creator: String
     var url: String

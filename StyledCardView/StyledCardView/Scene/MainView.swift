@@ -8,15 +8,18 @@
 import SwiftUI
 
 struct MainView: View {
+    private var dataProvider = DataProvider(bundle: .main)
+    
     var body: some View {
         TabView {
-            MinimalStyleContentView()
-                .tabItem {
-                    Text("Minimal")
-                }
-            RoundedStyleContentView()
+            RoundedStyleContentView(imageProvider: dataProvider)
                 .tabItem {
                     Text("Rounded")
+                }
+            
+            MinimalStyleContentView(imageProvider: dataProvider)
+                .tabItem {
+                    Text("Minimal")
                 }
         }
     }
